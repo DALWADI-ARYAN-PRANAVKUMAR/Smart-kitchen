@@ -1,1 +1,7 @@
 project_id = "amgemhtiefgzhptdgoem"
+
+[functions.ai-suggest-recipe]
+verify_jwt = false
+
+[functions.photo-pantry-scan]
+verify_jwt = false
