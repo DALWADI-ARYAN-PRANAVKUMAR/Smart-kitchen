@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Classic Omelet",
+    "time_minutes": 10,
+    "tags": ["vegetarian", "gluten-free", "quick", "breakfast"],
+    "ingredients": {"eggs": 2, "butter": 1, "salt": 1, "pepper": 1},
+    "steps": ["Beat eggs with salt and pepper.", "Melt butter in pan.", "Pour eggs, cook 2 min, fold and serve."]
+  },
+  {
+    "name": "Garlic Fried Rice",
+    "time_minutes": 15,
+    "tags": ["vegetarian", "quick", "asian"],
+    "ingredients": {"rice": 2, "garlic": 3, "soy sauce": 1, "oil": 1, "onion": 1, "eggs": 1},
+    "steps": ["Heat oil, sauté garlic and onion.", "Add rice, stir-fry 3 min.", "Push aside, scramble egg, mix in soy sauce."]
+  },
+  {
+    "name": "Tomato Pasta",
+    "time_minutes": 20,
+    "tags": ["vegetarian", "italian", "quick"],
+    "ingredients": {"pasta": 200, "tomato": 3, "garlic": 2, "oil": 1, "salt": 1, "basil": 1},
+    "steps": ["Boil pasta.", "Sauté garlic in oil, add tomato.", "Toss pasta with sauce and basil."]
+  },
+  {
+    "name": "Chicken Stir-Fry",
+    "time_minutes": 25,
+    "tags": ["asian", "quick", "high-protein"],
+    "ingredients": {"chicken": 300, "soy sauce": 2, "garlic": 2, "onion": 1, "bell pepper": 1, "oil": 1, "ginger": 1},
+    "steps": ["Sear chicken in oil.", "Add aromatics and veg, stir-fry 5 min.", "Finish with soy sauce."]
+  },
+  {
+    "name": "Chickpea Curry",
+    "time_minutes": 30,
+    "tags": ["vegetarian", "vegan", "gluten-free", "indian"],
+    "ingredients": {"chickpeas": 400, "onion": 1, "tomato": 2, "garlic": 2, "ginger": 1, "curry powder": 2, "oil": 1, "coconut milk": 200},
+    "steps": ["Sauté onion, garlic, ginger.", "Add spices, tomato, chickpeas.", "Simmer with coconut milk 15 min."]
+  },
+  {
+    "name": "Caesar Salad",
+    "time_minutes": 10,
+    "tags": ["quick", "salad"],
+    "ingredients": {"lettuce": 1, "parmesan": 1, "croutons": 1, "lemon": 1, "garlic": 1, "oil": 1, "anchovy": 1},
+    "steps": ["Whisk dressing.", "Toss lettuce, croutons, parmesan with dressing."]
+  },
+  {
+    "name": "Mushroom Risotto",
+    "time_minutes": 40,
+    "tags": ["vegetarian", "italian"],
+    "ingredients": {"rice": 1, "mushroom": 200, "onion": 1, "garlic": 2, "butter": 2, "parmesan": 1, "vegetable broth": 500},
+    "steps": ["Sauté onion, garlic, mushrooms.", "Add rice, then broth ladle by ladle.", "Finish with butter and parmesan."]
+  },
+  {
+    "name": "Black Bean Tacos",
+    "time_minutes": 15,
+    "tags": ["vegetarian", "vegan", "mexican", "quick"],
+    "ingredients": {"black beans": 400, "tortilla": 4, "onion": 1, "garlic": 1, "cumin": 1, "lime": 1, "cilantro": 1, "oil": 1},
+    "steps": ["Sauté onion, garlic, cumin.", "Add beans, mash slightly.", "Fill tortillas with lime and cilantro."]
+  },
+  {
+    "name": "Banana Pancakes",
+    "time_minutes": 20,
+    "tags": ["vegetarian", "breakfast"],
+    "ingredients": {"banana": 2, "eggs": 2, "flour": 1, "milk": 1, "sugar": 1, "butter": 1},
+    "steps": ["Mash bananas, mix with eggs, flour, milk, sugar.", "Cook in butter until golden."]
+  },
+  {
+    "name": "Lentil Soup",
+    "time_minutes": 35,
+    "tags": ["vegetarian", "vegan", "gluten-free", "soup"],
+    "ingredients": {"lentils": 200, "onion": 1, "carrot": 2, "celery": 2, "garlic": 2, "vegetable broth": 700, "cumin": 1, "oil": 1},
+    "steps": ["Sauté veg.", "Add lentils, broth, cumin.", "Simmer 25 min."]
+  },
+  {
+    "name": "Grilled Cheese",
+    "time_minutes": 8,
+    "tags": ["vegetarian", "quick"],
+    "ingredients": {"bread": 2, "cheddar": 1, "butter": 1},
+    "steps": ["Butter bread, fill with cheese.", "Grill until golden both sides."]
+  },
+  {
+    "name": "Shakshuka",
+    "time_minutes": 25,
+    "tags": ["vegetarian", "breakfast"],
+    "ingredients": {"eggs": 3, "tomato": 4, "onion": 1, "bell pepper": 1, "garlic": 2, "cumin": 1, "paprika": 1, "oil": 1},
+    "steps": ["Sauté onion, pepper, garlic.", "Add tomato and spices, simmer.", "Crack eggs in, cover, cook until set."]
+  }
+]
