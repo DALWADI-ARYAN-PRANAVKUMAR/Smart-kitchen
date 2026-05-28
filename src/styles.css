@@ -154,15 +154,27 @@
     letter-spacing: -0.01em;
   }
 }
-
 @layer utilities {
   .glass {
-    background: color-mix(in oklch, var(--card) 70%, transparent);
-    backdrop-filter: blur(12px);
+    background: color-mix(in oklch, var(--card) 55%, transparent);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid color-mix(in oklch, var(--foreground) 8%, transparent);
+    box-shadow:
+      0 1px 0 0 color-mix(in oklch, var(--background) 60%, transparent) inset,
+      0 10px 30px -12px color-mix(in oklch, var(--foreground) 18%, transparent);
+  }
+  .glass-strong {
+    background: color-mix(in oklch, var(--card) 72%, transparent);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid color-mix(in oklch, var(--foreground) 10%, transparent);
   }
   .paper {
     background-image:
-      radial-gradient(at 12% 8%, color-mix(in oklch, var(--terracotta-soft) 18%, transparent) 0px, transparent 50%),
-      radial-gradient(at 88% 92%, color-mix(in oklch, var(--sage) 20%, transparent) 0px, transparent 55%);
+      radial-gradient(at 12% 8%, color-mix(in oklch, var(--terracotta-soft) 22%, transparent) 0px, transparent 50%),
+      radial-gradient(at 88% 92%, color-mix(in oklch, var(--sage) 22%, transparent) 0px, transparent 55%),
+      radial-gradient(at 50% 50%, color-mix(in oklch, var(--accent) 6%, transparent) 0px, transparent 70%);
   }
 }
+
