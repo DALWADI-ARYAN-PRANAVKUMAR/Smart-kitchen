@@ -1,0 +1,2 @@
+# No external dependencies — uses Python's built-in tkinter.
+# Just run:  python main.py
