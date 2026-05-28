@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { ChefHat, Sparkles, Calendar, BookOpen, Dice5, Soup, Trash2, Plus, Download, Camera, Wand2, Clock, AlertTriangle, Check, X, Search } from "lucide-react";
+import { ChefHat, Sparkles, Calendar, BookOpen, Dice5, Soup, Trash2, Plus, Download, Camera, Wand2, Clock, AlertTriangle, Check, X, Search, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
+
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -67,7 +69,8 @@ export function SmartKitchen() {
 
       <main className="mx-auto max-w-6xl px-4 pb-24 pt-6 sm:px-6">
         <Tabs defaultValue="pantry" className="w-full">
-          <TabsList className="mx-auto mb-8 grid h-auto w-full max-w-3xl grid-cols-5 gap-1 rounded-full bg-card/70 p-1.5 shadow-sm backdrop-blur">
+          <TabsList className="mx-auto mb-8 grid h-auto w-full max-w-3xl grid-cols-5 gap-1 rounded-full glass p-1.5">
+
             <TabTrigger value="pantry" icon={<Soup className="h-4 w-4" />} label="Pantry" />
             <TabTrigger value="cook" icon={<ChefHat className="h-4 w-4" />} label="Cook" />
             <TabTrigger value="plan" icon={<Calendar className="h-4 w-4" />} label="Plan" />
@@ -100,11 +103,12 @@ function TabTrigger({ value, icon, label }: { value: string; icon: React.ReactNo
 }
 
 function Header({ pantrySize, recipeCount, onReset }: { pantrySize: number; recipeCount: number; onReset: () => void }) {
+  const { theme, toggle } = useTheme();
   return (
-    <header className="border-b border-border/60 bg-gradient-to-b from-cream/80 to-transparent backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-6 sm:px-6">
+    <header className="sticky top-0 z-40 border-b border-border/50 glass-strong">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-5 sm:px-6">
         <div className="flex items-center gap-3">
-          <div className="grid h-11 w-11 place-items-center rounded-2xl bg-primary text-primary-foreground shadow-sm">
+          <div className="grid h-11 w-11 place-items-center rounded-2xl bg-gradient-to-br from-primary to-terracotta-soft text-primary-foreground shadow-md">
             <ChefHat className="h-5 w-5" />
           </div>
           <div>
@@ -114,14 +118,23 @@ function Header({ pantrySize, recipeCount, onReset }: { pantrySize: number; reci
             </p>
           </div>
         </div>
-        <div className="hidden items-center gap-3 text-sm text-muted-foreground sm:flex">
-          <Badge variant="secondary" className="rounded-full bg-secondary/70 px-3 py-1 font-normal">
+        <div className="flex items-center gap-2 sm:gap-3 text-sm text-muted-foreground">
+          <Badge variant="secondary" className="hidden sm:inline-flex rounded-full bg-secondary/70 px-3 py-1 font-normal">
             {pantrySize} in pantry
           </Badge>
-          <Badge variant="secondary" className="rounded-full bg-secondary/70 px-3 py-1 font-normal">
+          <Badge variant="secondary" className="hidden sm:inline-flex rounded-full bg-secondary/70 px-3 py-1 font-normal">
             {recipeCount} recipes
           </Badge>
-          <Button variant="ghost" size="sm" onClick={onReset} className="text-muted-foreground hover:text-foreground">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggle}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            className="rounded-full text-muted-foreground hover:text-foreground"
+          >
+            {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </Button>
+          <Button variant="ghost" size="sm" onClick={onReset} className="hidden sm:inline-flex text-muted-foreground hover:text-foreground">
             Reset
           </Button>
         </div>
@@ -129,6 +142,7 @@ function Header({ pantrySize, recipeCount, onReset }: { pantrySize: number; reci
     </header>
   );
 }
+
 
 function Footer() {
   return (
