@@ -572,7 +572,19 @@ class SmartKitchenApp:
 # ---------- Entry point ----------
 
 def main():
-    root = tk.Tk()
+    """Launch the Tkinter GUI, or fall back to the console UI if no display.
+
+    This lets the same project run on a normal desktop (full GUI) AND inside
+    headless / online Python IDEs that have no graphical display.
+    """
+    try:
+        root = tk.Tk()
+    except tk.TclError:
+        print("No graphical display detected — starting the console version.\n"
+              "(Run this on a desktop with a screen to get the full GUI.)")
+        import cli
+        cli.main()
+        return
     SmartKitchenApp(root)
     root.mainloop()
 
