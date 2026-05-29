@@ -91,7 +91,3 @@ smart_kitchen/
 - GUI programming with `tkinter` and `ttk`
 - Sorting with custom keys
 - Comprehensions
-
-## License
-
-MIT
