@@ -17,11 +17,21 @@ file I/O**.
 
 ```bash
 cd smart_kitchen
-python main.py
+python run.py
 ```
 
-That's it. **No `pip install` needed** — Tkinter ships with Python.
-Tested on Python 3.10+.
+`run.py` works **everywhere**:
+
+- On a desktop with a screen → opens the full **Tkinter GUI**.
+- In a headless / online Python IDE (no display) → automatically opens an
+  identical **console version** (`cli.py`).
+
+Both share the same logic in `core.py`, so behaviour is the same on every
+platform. **No `pip install` needed.** Tested on Python 3.10+.
+
+> The web version (React, in the project root) is what you publish online;
+> this Python app is the standalone, IDE-friendly version of the same project.
+
 
 ## What it does
 
