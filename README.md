@@ -98,12 +98,6 @@ supabase/functions/
 
 ---
 
-## 📜 License
-
-MIT — do whatever you want, no warranty.
-
----
-
 ## 🙏 Credits
 
 Built as a learning project. Inspired by every "what's in my fridge?" moment.
