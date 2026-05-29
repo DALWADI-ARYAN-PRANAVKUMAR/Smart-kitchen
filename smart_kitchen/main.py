@@ -1,15 +1,26 @@
 """
 Smart Kitchen — Tkinter desktop UI.
 
-Run with:  python main.py
-No external dependencies (uses Python's built-in tkinter).
+Run with:  python run.py   (recommended — auto-falls back to console mode)
+       or:  python main.py  (forces the GUI; needs a display)
+
+No external dependencies (uses Python's built-in tkinter on the desktop).
+If tkinter is unavailable (e.g. a headless online IDE), this file hands off
+to the console version in cli.py automatically.
 """
 
-import tkinter as tk
-from tkinter import ttk, messagebox, simpledialog, filedialog
+try:
+    import tkinter as tk
+    from tkinter import ttk, messagebox, simpledialog, filedialog
+    _TK_OK = True
+except Exception:  # tkinter missing (headless / online IDE)
+    tk = None
+    _TK_OK = False
+
 from datetime import date, timedelta
 
 import core
+
 
 
 # ---------- Theme ----------
