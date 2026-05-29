@@ -588,6 +588,12 @@ def main():
     This lets the same project run on a normal desktop (full GUI) AND inside
     headless / online Python IDEs that have no graphical display.
     """
+    if not _TK_OK:
+        print("tkinter is not available — starting the console version.\n"
+              "(Run on a desktop with a screen to get the full GUI.)")
+        import cli
+        cli.main()
+        return
     try:
         root = tk.Tk()
     except tk.TclError:
