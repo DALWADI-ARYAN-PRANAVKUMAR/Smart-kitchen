@@ -143,7 +143,3 @@ supabase/functions/
 - **Motion**: Hover-only micro-interactions; no animation gimmicks.
 
 ---
-
-## 🙏 Credits
-
-Built as a learning project. Inspired by every "what's in my fridge?" moment.
