@@ -49,7 +49,7 @@ Data lives in plain TypeScript objects — easy to read, easy to extend.
 
 ---
 
-## 🚀 Run Locally
+## 🚀 Run the Web App Locally
 
 ```bash
 bun install      # or: npm install
@@ -64,6 +64,49 @@ App runs at `http://localhost:5173`.
 bun run build
 bun run start
 ```
+
+---
+
+## 🐍 Run in a Python IDE (Standalone Version)
+
+This repository includes a **pure Python** version that works completely offline and runs inside any Python IDE (VS Code, PyCharm, Replit, Google Colab, or online Python compilers).
+
+### Steps
+
+1. **Open the project folder** in your Python IDE.
+
+2. **Navigate to the Python app:**
+   ```bash
+   cd smart_kitchen
+   ```
+
+3. **Run the universal launcher:**
+   ```bash
+   python run.py
+   ```
+   - **If your IDE has a display (desktop):** it opens a full **Tkinter GUI**.
+   - **If your IDE is headless (online / no display):** it automatically switches to the **text-based console UI**.
+
+4. **Use the menu** that appears to:
+   - View / add pantry ingredients
+   - See what you can cook right now
+   - Browse the recipe book
+   - Generate a shopping list
+   - Roll the dice with "Surprise Me"
+
+> **No `pip install` needed.** The Python version uses only the standard library (tkinter, json, datetime, random). Tested on Python 3.10+.
+
+### Files you need (inside `smart_kitchen/`)
+
+| File | Purpose |
+|------|---------|
+| `run.py` | Universal launcher — detects GUI or console |
+| `main.py` | Tkinter GUI |
+| `cli.py` | Text / console interface |
+| `core.py` | All matching, ranking, and file logic |
+| `data/recipes.json` | 12 seeded recipes |
+| `data/substitutions.json` | Ingredient swap table |
+| `data/pantry.json` | Your saved pantry (auto-created) |
 
 ---
 
