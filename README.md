@@ -2,9 +2,12 @@
 
 > Cook with what you already have. A pantry-first recipe & grocery assistant that turns the random ingredients in your kitchen into meals you can actually make tonight — and a smart shopping list for everything you're missing.
 
+**🔗 Live Web App:** [https://kitchen-help.lovable.app](https://kitchen-help.lovable.app)
+
 ![Stack](https://img.shields.io/badge/stack-React%20%2B%20TypeScript-3178c6)
 ![Styling](https://img.shields.io/badge/style-Tailwind%20CSS-38bdf8)
 ![Runtime](https://img.shields.io/badge/runtime-TanStack%20Start-ef4444)
+![Python](https://img.shields.io/badge/python-Tkinter%20%2F%20CLI-3776ab)
 
 ---
 
